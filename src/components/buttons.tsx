@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react'
+import { Button } from '../assets/style'
 
 interface ButtonProps {
   text: string,
@@ -9,9 +10,9 @@ interface ButtonProps {
 
 const Buttons: React.FC<ButtonProps> = ({text, children, onClick, ...props}) => {
   return (
-    <button {...props} onClick={onClick}>
+    <Button{...props} onClick={onClick}>
       {text}
-    </button>
+    </Button>
   )
 }
 

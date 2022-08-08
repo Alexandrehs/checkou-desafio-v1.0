@@ -1,5 +1,7 @@
 import React, { InputHTMLAttributes } from 'react'
 
+import {Input} from '../assets/style'
+
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type: string,
   name: string,
@@ -11,7 +13,7 @@ const Inputs: React.FC<InputProps> = ({type, name, label, onChange}) => {
   return (
     <>
       <label>{label}</label>
-      <input type={type} name={name} onChange={onChange}/>
+      <Input type={type} name={name} onChange={onChange}/>
     </>
   )
 }
